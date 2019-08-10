@@ -15,6 +15,12 @@ $ psql
 CREATE DATABASE example_knex_bug_db;
 ```
 
+#### Dependancies
+
+```bash
+$ npm install
+```
+
 #### Knex 
 
 ##### Run Migrations
