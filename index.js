@@ -11,15 +11,14 @@ app.get('/', async (req, res) => {
 	console.log('request recd')
 
   // disconnected pg spans
-  var info = await database('example').where({ message: 'rowValue1' }).first()
+  var info = await database('example_knex_bug').where({ message: 'rowValue1' }).first()
 
   // connected pg spans
-  // var info = await database('example').where({ message: 'rowValue1' }).first().then(x => x)
+  // var info = await database('example_knex_bug').where({ message: 'rowValue1' }).first().then(x => x)
   
   console.log('info is', info)
 
-	res.send(`Hello World! info: ${info.message}`)
-
+  res.send(`Hello World! info: ${info.message}`)
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
