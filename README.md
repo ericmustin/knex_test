@@ -1,7 +1,7 @@
 # knex_test
 example to demonstrate knex integration workaround
 
-currently knex query not ending in `.then` will not be instrumented
+currently knex query not ending in `.then` will not be connected to rest of trace
 
 ## Setup
 
